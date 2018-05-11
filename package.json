@@ -1,0 +1,30 @@
+{
+  "name": "metrix-ai.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metrix-ai/metrix-ai.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/metrix-ai/metrix-ai.github.io/issues"
+  },
+  "homepage": "https://github.com/metrix-ai/metrix-ai.github.io#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.24.4",
+    "gulp-babel": "^7.0.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
