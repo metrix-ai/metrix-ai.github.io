@@ -117,7 +117,7 @@ function resizeCallback() {
   dataarray = [];
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
-  interval = animate(window.innerWidth, window.innerWidth);
+  interval = animate(window.innerWidth, window.innerHeight);
 }
 
 window.addEventListener('resize',resizeCallback);
