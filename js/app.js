@@ -1,7 +1,4 @@
-
-function strtCan() {
-}
-
+function strtCan() { }
 function email_valid(t) {
     re.test(t.value) ? (t.classList.remove("error"), t.parentElement.classList.remove("error")) : (t.classList.add("error"), t.parentElement.classList.add("error"))
 }

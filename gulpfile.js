@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const babel = require('gulp-babel');
 const browserify = require('gulp-browserify');
+const uglify = require('gulp-uglify');
 
 // process JS files and return the stream.
 gulp.task('js', function() {
@@ -14,7 +15,7 @@ gulp.task('js', function() {
         })
       )
       .pipe(browserify())
-      // .pipe(uglify())
+      .pipe(uglify())
       .pipe(gulp.dest('dist/js'))
   );
 });
