@@ -1,6 +1,5 @@
 const matrix = document.getElementById('matrix');
 const ctx = matrix.getContext('2d');
-const debounce = require('lodash/debounce');
 
 const config = {
   amount: 60,
@@ -16,6 +15,7 @@ const config = {
   color: '#7C7C7C'
 };
 
+
 let dataarray = [];
 let width = (ctx.canvas.width = window.innerWidth);
 let height = (ctx.canvas.height = window.innerHeight);
@@ -28,18 +28,20 @@ class Data {
     this.historySizeMax = Math.floor(Math.random() * config.maxLength + config.minLength)
   }
 
-  update() {
+  update(w, h) {
     this.y += config.size;
-    if (this.y >= height + this.historySizeMax * config.size) {
+    if (this.y >= h + this.historySizeMax * config.size) {
       dataarray.splice(dataarray.indexOf(this), 1)
-      putData();
+      putData(w, h);
     }
 
     this.history.unshift(
       String.fromCharCode(60 + Math.floor(Math.random() * 62)),
     );
 
-    if (this.history.length > this.historySizeMax) this.history.pop();
+    if (this.history.length > this.historySizeMax) {
+      this.history.pop();
+    }
   }
 
   draw() {
@@ -55,8 +57,8 @@ class Data {
   }
 }
 
-function putData() {
-  var count = Math.floor(width / config.size);
+function putData(w, h) {
+  var count = Math.floor(w / config.size);
   const newX = Math.floor(Math.random() * count) * config.size;
 
   for (let i = 0; i < dataarray.length; i++) {
@@ -92,17 +94,17 @@ function initCtx(){
 let interval;
 initCtx();
 
-function animate(width, height) {
+function animate(w, h) {
   initCtx();
   return setInterval(function() {
-    ctx.clearRect(0, 0, width, height);
+    ctx.clearRect(0, 0, w, h);
 
     if (dataarray.length < config.amount) {
-      putData();
+      putData(w, h);
     }
 
     for (let i = 0; i < dataarray.length; i++) {
-      dataarray[i].update();
+      dataarray[i].update(w, h);
       dataarray[i].draw();
     }
   }, config.speed);
@@ -111,10 +113,10 @@ function animate(width, height) {
 interval = animate(width, height);
 
 function resizeCallback() {
-  dataarray = []
+  clearInterval(interval);
+  dataarray = [];
   ctx.canvas.width = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
-  clearInterval(interval);
   interval = animate(window.innerWidth, window.innerWidth);
 }
 

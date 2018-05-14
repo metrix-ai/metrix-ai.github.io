@@ -1,3 +1,7 @@
+
+function strtCan() {
+}
+
 function email_valid(t) {
     re.test(t.value) ? (t.classList.remove("error"), t.parentElement.classList.remove("error")) : (t.classList.add("error"), t.parentElement.classList.add("error"))
 }
@@ -38,6 +42,8 @@ var fix_bl = document.getElementById("fixec_block"),
 window.onscroll = function() {
     fix_pa.getBoundingClientRect().top <= 0 ? "fixed" != fix_po && (fix_bl.style.position = "fixed") : "static" != fix_po && (fix_bl.style.position = "static")
 }, window.addEventListener("load", function() {
+    strtCan(), fix_pa.style.height = fix_bl.getBoundingClientRect().height + 35 + "px"
+}), window.addEventListener("resize", function() {
     strtCan(), fix_pa.style.height = fix_bl.getBoundingClientRect().height + 35 + "px"
 });
 var form_1 = document.querySelector(".m__f--form [type=submit]"),
