@@ -4,6 +4,19 @@ const babel = require('gulp-babel');
 const browserify = require('gulp-browserify');
 const uglify = require('gulp-uglify');
 
+// Sass/CSS stuff
+const sass = require('gulp-sass');
+const prefix = require('gulp-autoprefixer');
+const minifycss = require('gulp-minify-css');
+
+// compile all Sass
+gulp.task('styles', function (){
+  return gulp.src('./styles/sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./dist/css'))
+      .pipe(browserSync.stream());
+});
+
 // process JS files and return the stream.
 gulp.task('js', function() {
   return (
@@ -36,7 +49,7 @@ gulp.task('default', ['js'], function() {
     },
   });
 
-  // add browserSync.reload to the tasks array to make
-  // all browsers reload after tasks are complete.
   gulp.watch('js/*.js', ['js-watch']);
+  gulp.watch('./styles/sass/*.scss', ['styles']);
+  gulp.watch('index.html', ['styles']);
 });
