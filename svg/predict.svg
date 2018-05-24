@@ -1,0 +1,67 @@
+<svg height="148" width="383" xmlns=
+            "http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd" stroke="#000">
+              <path d="M65 69h15v14H65z" stroke-width="2"></path>
+              <g transform="translate(0 1)">
+                <path d=
+                "M59.855 74.5H35.144M59.854 78.5H39M59.857 82.5H46"
+                stroke-width="2" stroke-linecap="square"></path>
+                <path d="M18 56h66v30H18z" stroke-width="2"></path>
+                <path d=
+                "M22 60h38v4H22zM22 64h19v4H22zM65 82l15.03-14.062M65.018 68.235L80 82"
+                stroke-width="2"></path>
+                <path d=
+                "M112.667 76.5H164M153.2 79.5l10.8-3-10.8-3"
+                stroke-width="2" stroke-linejoin="round"
+                stroke-linecap="round"></path>
+                <g stroke-linejoin="round" stroke-width="6">
+                  <path d="M199.187 92h26.343">
+                    <animate attributename="d" begin="0s" dur="3s"
+                    repeatcount="indefinite" values=
+                    "M199.18662,92 L225.529673,92;M199.18662,92 L230.529673,92;M199.18662,92 L225.529673,92;M199.18662,92 L220.529673,92;M199.18662,92 L225.529673,92;">
+                    </animate>
+                  </path>
+                  <path d="M199.187 75h26.343">
+                    <animate attributename="d" begin="0.5s" dur=
+                    "3s" repeatcount="indefinite" values=
+                    "M199.18662,75 L225.529673,75;M199.18662,75 L230.529673,75;M199.18662,75 L225.529673,75;M199.18662,75 L220.529673,75;M199.18662,75 L225.529673,75;">
+                    </animate>
+                  </path>
+                  <path d="M199.187 58h26.343">
+                    <animate attributename="d" begin="1s" dur="3s"
+                    repeatcount="indefinite" values=
+                    "M199.18662,58 L225.529673,58;M199.18662,58 L230.529673,58;M199.18662,58 L225.529673,58;M199.18662,58 L220.529673,58;M199.18662,58 L225.529673,58;">
+                    </animate>
+                  </path>
+                </g>
+                <path d="M183 92.5h8M183 75.5h8M183 57.5h8"
+                stroke-width="6" stroke-linejoin="round"></path>
+                <path d="M239 92h30.136v26H305" stroke-width="2"
+                stroke-linejoin="round" stroke-linecap="round">
+                </path>
+                <path d=
+                "M294.2 121l10.8-3-10.8-3M239 57h30.136V31H305"
+                stroke-width="2" stroke-linejoin="round"
+                stroke-linecap="round"></path>
+                <path d="M294.2 34l10.8-3-10.8-3" stroke-width="2"
+                stroke-linejoin="round" stroke-linecap="round">
+                </path>
+                <circle cx="351" cy="30" r="30" stroke-width="2">
+                </circle>
+                <g stroke-width="2">
+                  <path d=
+                  "M324 119h8v27h-8zM336 108h8v38h-8zM348 138h8v8h-8zM360 96h8v50h-8z">
+                  </path>
+                  <path d="M320.371 88.45v57.455h62.167"></path>
+                </g>
+                <path d="M322 31h29l-20.938-21" stroke-width="2"
+                stroke-linejoin="round" stroke-linecap="round">
+                </path>
+                <path d="M350 31l13 25" stroke-width="2"></path>
+                <rect height="57" rx="4" stroke-width="2" width=
+                "87" x="8" y="44"></rect>
+                <path d=
+                "M13 50h77v46H13zM3 101a2 2 0 0 0-1.99 2.198l.399 4A2 2 0 0 0 3.399 109h94.203a2 2 0 0 0 1.99-1.802l.398-4A2 2 0 0 0 98 101H3z"
+                stroke-width="2"></path>
+              </g>
+            </g></svg>
